@@ -17,7 +17,6 @@ function Layout() {
     <ArticleSection></ArticleSection>
     <ThirdSection></ThirdSection>
     <PartnerSection/>
-    <div onClick={scrollToTop}></div>
     <Arrow onClick={scrollToTop} direction="up"></Arrow>
     </div>
     </>
