@@ -1,0 +1,33 @@
+#header{
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        padding-bottom: 45em;
+    }
+
+  
+  
+.content{
+    width: 100%;
+    position: relative;
+    z-index: 9999;
+    text-align: center;
+  }
+    
+      
+#header:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #262626;
+    border-radius: 0 0 50% 50% / 0 0 100% 100%;
+    transform: scaleX(2.8);
+  /* border-image: linear-gradient(45deg, purple, orange) 1; */
+}
+  
