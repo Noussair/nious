@@ -112,7 +112,7 @@ const ArticleSection = () => {
     </div>
     <div onClick={()=>scroll({top:20,behavior:'smooth'})} className='sticky bottom-10 left-0'>
 
-    <Arrow direction='down'></Arrow>
+    <Arrow onClick={()=>{}} direction='down'></Arrow>
     </div>
     </div>
     </div>

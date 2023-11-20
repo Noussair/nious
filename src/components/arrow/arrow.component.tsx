@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 
 type ArrowProps = {
   direction: 'up' | 'down' | 'left' | 'right';
+  onClick:MouseEventHandler<HTMLDivElement> | undefined
 };
 
-const Arrow = ({ direction }: ArrowProps) => {
+const Arrow = ({onClick, direction }: ArrowProps) => {
   const rotation = {
     up: 'rotate-180',
     right: 'rotate-90',
@@ -17,7 +18,7 @@ const Arrow = ({ direction }: ArrowProps) => {
     marginLeft:'85%'  };
 
   return (
-    <div className="flex items-center mr-0 mt-2 justify-center w-16 h-16 cursor-pointer rounded-full shadow-lg animate-pulse" style={gradientStyle}>
+    <div onClick={onClick} className="flex items-center mr-0 mt-2 justify-center w-16 h-16 cursor-pointer rounded-full shadow-lg animate-pulse" style={gradientStyle}>
       <svg
         className={`w-10 h-10 text-white ${rotation[direction]}`} // Increased size from w-5 h-5 to w-12 h-12
         fill="white"
