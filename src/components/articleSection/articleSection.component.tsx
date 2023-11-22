@@ -32,7 +32,7 @@ const ArticleSection = () => {
     <MenuButton></MenuButton>
     <div id='solutions' className="relative bg-gray-200 p-10">
       <div className="blur-edge"></div> {/* Apply the blur-edge class */}
-      <div style={{maxHeight:'600px'}} className="relative overflow-y-scroll">
+      <div id='disable-scroll' style={{maxHeight:'600px'}} className="relative overflow-y-scroll">
       <div className="flex justify-center items-center bg-gray-200 p-10">
       <div className="flex-1 md:flex hidden flex-col items-center justify-center">
         {/* Placeholder for the graphic, replace with actual graphic or component */}

@@ -108,7 +108,7 @@ const ImageSlider: React.FC = () => {
   }, []);
 
   return (
-    <div
+    <div 
       style={{ width: '80%', height: '500px', margin: '0 auto' }}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}

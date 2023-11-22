@@ -41,7 +41,7 @@ const Header = () => {
                 </div>
             </div>
         </header>
-        <div className='absolute top-20 left-0 right-0'>
+        <div style={{zIndex:100}} className='absolute top-20 left-0 right-0'>
 
         <ImageSlider ></ImageSlider>
         </div>
