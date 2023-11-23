@@ -1,4 +1,4 @@
-import React from 'react'
+
 import './third-section.css'
 import TextSlider from '../textSlider/text-slider.component'
 function ThirdSection() { 

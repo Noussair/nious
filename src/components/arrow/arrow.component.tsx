@@ -1,8 +1,8 @@
-import React, { MouseEventHandler } from 'react';
+
 
 type ArrowProps = {
   direction: 'up' | 'down' | 'left' | 'right';
-  onClick:MouseEventHandler<HTMLDivElement> | undefined
+  onClick:any | undefined
 };
 
 const Arrow = ({onClick, direction }: ArrowProps) => {
@@ -18,7 +18,7 @@ const Arrow = ({onClick, direction }: ArrowProps) => {
     marginLeft:'85%'  };
 
   return (
-    <div onClick={onClick} className="flex items-center mr-0 mt-2 justify-center w-16 h-16 cursor-pointer rounded-full shadow-lg animate-pulse" style={gradientStyle}>
+    <button onClick={onClick} className="flex items-center mr-0 mt-2 justify-center w-16 h-16 cursor-pointer rounded-full shadow-lg animate-pulse" style={gradientStyle}>
       <svg
         className={`w-10 h-10 text-white ${rotation[direction]}`} // Increased size from w-5 h-5 to w-12 h-12
         fill="white"
@@ -33,7 +33,7 @@ const Arrow = ({onClick, direction }: ArrowProps) => {
           d="M12 4v16m0 0l-7-7m7 7l7-7"
         ></path>
       </svg>
-    </div>
+    </button>
   );
 };
 

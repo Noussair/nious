@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { faAtom } from '@fortawesome/free-solid-svg-icons'
 import logo from '../../assets/logo.png'
 import './header.css'
@@ -41,7 +41,7 @@ const Header = () => {
                 </div>
             </div>
         </header>
-        <div style={{zIndex:100}} className='absolute top-20 left-0 right-0'>
+        <div style={{zIndex:100}} className='absolute top-40 left-0 right-0'>
 
         <ImageSlider ></ImageSlider>
         </div>

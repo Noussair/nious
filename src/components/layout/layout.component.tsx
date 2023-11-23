@@ -1,4 +1,4 @@
-import React from 'react'
+
 import ArticleSection from '../articleSection/articleSection.component'
 import PartnerSection from '../partners/partners.component'
 import ThirdSection from '../thirdSection/thirdSection.component'

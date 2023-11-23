@@ -1,4 +1,4 @@
-import React from "react";
+
 import Slider from "react-slick";
 
 const CircleShape = () => {
@@ -65,7 +65,7 @@ const PartnerSection = () => {
      <h1 style={{marginBottom:'5rem'}} className="text-4xl text-darker  font-bold text-gray-900 mb-4 text-center">TESTIMONIALS / LATEST POSTS /
 PARTNERS / CLIENTS / EVENTS</h1>
          <Slider {...settings}>
-                    {slides.map((slide,index)=>{
+                    {slides.map((_slide,index)=>{
                         return (<div key={index}>
                             <CircleShape ></CircleShape>
                         </div>)

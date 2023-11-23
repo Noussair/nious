@@ -1,5 +1,5 @@
 
-import React from 'react';
+
 import qrCodeLogo from '../../assets/qr2.png'
 import facebookLogo from '../../assets/facebook.svg'
 import linkedinLogo from '../../assets/linkedin.svg'

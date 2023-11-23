@@ -13,3 +13,28 @@ html{
 .css-doq0dk{
   cursor: pointer;
 }
+html {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  overflow-y: scroll;
+}
+
+html::-webkit-scrollbar {
+  width: 0px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+html:hover::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+html:hover::-webkit-scrollbar-track {
+  background-color: transparent;
+}

@@ -1,6 +1,12 @@
-import React from 'react';
-import './article.css'
+
+
+
+
+import React, { useRef, useState, useEffect } from 'react';
+import './article.css';
 import Arrow from '../arrow/arrow.component';
+import Article from './components/article.component';
+
 const MenuButton: React.FC = () => {
   return (
     <div className="flex justify-center mt-10">
@@ -26,100 +32,132 @@ const MenuButton: React.FC = () => {
   );
 };
 
+interface ArticleData {
+  title: string;
+  content: string;
+  graphicColor: string;
+}
+
 const ArticleSection = () => {
+  const articles: ArticleData[] = [
+    {
+      title: 'Article 1',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit ',
+      graphicColor: 'green',
+    },
+    {
+      title: 'Article 2',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+      graphicColor: 'green',
+    },
+    {
+      title: 'Article 3',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+      graphicColor: 'green',
+    },
+    {
+      title: 'Article 4',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+      graphicColor: 'green',
+    },
+    {
+      title: 'Article 5',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+      graphicColor: 'green',
+    },
+    // Add more articles as needed
+  ];
+  const ArticleContainerRef = useRef<HTMLDivElement>(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [visibleArticles, setVisibleArticles] = useState<number[]>([]);
+
+  
+
+  const scrollToElement = (e:any) => {
+    e.stopPropagation();
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest'
+      });
+    }
+  };
+
+  const handleIntersection = (entries: IntersectionObserverEntry[]) => {
+    let newVisibleIndices: number[] = [];
+  
+    entries.forEach((entry) => {
+      const index = Number(entry.target.id);
+  
+      if (entry.isIntersecting) {
+        if (entry.intersectionRatio >= 0.2) {
+          // If more than 50% visible, consider it fully visible
+          newVisibleIndices.push(index);
+        }
+      } else {
+        // If not intersecting, consider it leaving the container
+        newVisibleIndices.push(index);
+      }
+    });
+    console.log(newVisibleIndices);
+    if (newVisibleIndices.length === articles.length +1){
+      newVisibleIndices = [];
+    }
+    
+    setVisibleArticles(newVisibleIndices);
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(handleIntersection, {
+      root: document.getElementById('solutions'),
+      rootMargin: '500px',
+      threshold: 0.4, // Adjust the threshold as needed
+    });
+
+    if (ArticleContainerRef.current) {
+      const articles = ArticleContainerRef.current.children;
+      Array.from(articles).forEach((article) => {
+        observer.observe(article);
+      });
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [ArticleContainerRef]);
+
+  
+
   return (
     <>
-    <MenuButton></MenuButton>
-    <div id='solutions' className="relative bg-gray-200 p-10">
-      <div className="blur-edge"></div> {/* Apply the blur-edge class */}
-      <div id='disable-scroll' style={{maxHeight:'600px'}} className="relative overflow-y-scroll">
-      <div className="flex justify-center items-center bg-gray-200 p-10">
-      <div className="flex-1 md:flex hidden flex-col items-center justify-center">
-        {/* Placeholder for the graphic, replace with actual graphic or component */}
-        <div style={{borderRadius:'70px'}} className="bg-darker flex p-28 mt-4 w-16 relative">
-          {/* Example of circles to simulate the particles */}
-          <span className="absolute bg-light z-10 top-10 right-10 w-11 h-11 bg-teal-500 rounded-full"></span>
-          <span className="absolute bg-light z-10 top-8 left-20 w-7 h-7 bg-teal-500 rounded-full"></span>
-          <span className="absolute bg-light z-10 top-10 left-10 w-3 h-3 bg-teal-500 rounded-full"></span>
-          <span className="absolute bg-light z-10 top-20 left-6 w-7 h-7 bg-teal-500 rounded-full"></span>
-          <span className="absolute bg-light z-10 top-36 left-6 w-9 h-9 bg-teal-500 rounded-full"></span>
-          <span className="absolute bg-light z-10 top-50 left-24 w-3 h-3 bg-teal-500 rounded-full"></span>
-        </div>
-        <div style={{borderRadius:'70px'}} className="bg-green flex p-28 mt-4 w-16 relative">
-          {/* Example of circles to simulate the particles */}
-          <span className="absolute bg-light z-10 top-10 right-10 w-11 h-11 bg-teal-500 rounded-full"></span>
-          <span className="absolute bg-light z-10 top-8 left-20 w-7 h-7 bg-teal-500 rounded-full"></span>
-          <span className="absolute bg-light z-10 top-10 left-10 w-3 h-3 bg-teal-500 rounded-full"></span>
-          <span className="absolute bg-light z-10 top-20 left-6 w-7 h-7 bg-teal-500 rounded-full"></span>
-          <span className="absolute bg-light z-10 top-36 left-6 w-9 h-9 bg-teal-500 rounded-full"></span>
-          <span className="absolute bg-light z-10 top-50 left-24 w-3 h-3 bg-teal-500 rounded-full"></span>
-        </div>
-        <div style={{borderRadius:'70px'}} className="bg-grey flex p-28 mt-4 w-16 relative">
-          {/* Example of circles to simulate the particles */}
-          <span className="absolute bg-light z-10 top-10 right-10 w-11 h-11 bg-teal-500 rounded-full"></span>
-          <span className="absolute bg-light z-10 top-8 left-20 w-7 h-7 bg-teal-500 rounded-full"></span>
-          <span className="absolute bg-light z-10 top-10 left-10 w-3 h-3 bg-teal-500 rounded-full"></span>
-          <span className="absolute bg-light z-10 top-20 left-6 w-7 h-7 bg-teal-500 rounded-full"></span>
-          <span className="absolute bg-light z-10 top-36 left-6 w-9 h-9 bg-teal-500 rounded-full"></span>
-          <span className="absolute bg-light z-10 top-50 left-24 w-3 h-3 bg-teal-500 rounded-full"></span>
+      <MenuButton />
+      <div id="solutions" className="relative bg-gray-200 p-10">
+        <div id="blur-container" className="blur-edge  bg-darker"></div>
+        <div
+          id="disable-scroll"
+          style={{ maxHeight: '700px' }}
+          className="relative overflow-y-scroll"
+          ref={ArticleContainerRef}
+        >
+          {articles.map((article, index) => (
+  <div id={`${index}`} ref={scrollContainerRef} key={index}>
+    <Article
+      title={article.title}
+      content={article.content}
+      graphicColor={
+        visibleArticles.length > 0 && visibleArticles.includes(index)
+          ? 'darker'
+          : 'green'
+      }
+    />
+  </div>
+))}
+          <div className="sticky bottom-10 left-0">
+            <Arrow onClick={scrollToElement} direction="down" />
+          </div>
         </div>
       </div>
-      <div className="flex-1">
-        {/* Text content */}
-        <div className="mb-8">
-          <h2 className="text-4xl font-bold text-grey mb-2">Particles</h2>
-          <p className="text-grey">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
-        </div>
-        <div className="mb-8">
-          <h2 className="text-4xl font-bold text-grey mb-2">Particles</h2>
-          <p className="text-grey">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
-        </div>
-        <div className="mb-8">
-          <h2 className="text-4xl font-bold text-grey mb-2">Particles</h2>
-          <p className="text-grey">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
-        </div>
-        <div className="mb-8">
-          <h2 className="text-4xl font-bold text-grey mb-2">Particles</h2>
-          <p className="text-grey">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
-        </div>
-        <div>
-          <h2 className="text-4xl font-bold text-grey mb-2">Fluid</h2>
-          <p className="text-grey">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
-        </div>
-        <div className="mb-8">
-          <h2 className="text-4xl font-bold text-grey mb-2">Particles</h2>
-          <p className="text-grey">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
-        </div>
-        <div className="mb-8">
-          <h2 className="text-4xl font-bold text-grey mb-2">Particles</h2>
-          <p className="text-grey">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div onClick={()=>scroll({top:20,behavior:'smooth'})} className='sticky bottom-10 left-0'>
-
-    <Arrow onClick={()=>{}} direction='down'></Arrow>
-    </div>
-    </div>
-    </div>
-    
-    
     </>
-   
   );
 };
 

@@ -2,7 +2,7 @@ import React, { useState, useEffect, TouchEvent } from 'react';
 import Carousel from 'react-spring-3d-carousel';
 import { v4 as uuidv4 } from 'uuid';
 import { config as springConfig } from 'react-spring';
-
+import './styles.css'
 interface Slide {
   key: string;
   content: JSX.Element;
@@ -15,11 +15,11 @@ const getTouches = (evt: TouchEvent) => {
 
 const ImageSlider: React.FC = () => {
   const [goToSlide, setGoToSlide] = useState(0);
-  const [offsetRadius, setOffsetRadius] = useState(2);
-  const [showNavigation, setShowNavigation] = useState(true);
-  const [enableSwipe, setEnableSwipe] = useState(true);
-  const [animationConfig, setAnimationConfig] = useState(springConfig.gentle);
-  const [touchPosition, setTouchPosition] = useState({ xDown: null, yDown: null });
+  const [offsetRadius] = useState(2);
+  const [showNavigation] = useState(true);
+  const [enableSwipe] = useState(true);
+  const [animationConfig] = useState(springConfig.gentle);
+  const [touchPosition, setTouchPosition] = useState({ xDown: 0, yDown: 0 });
 
   const slides: Slide[] = [
     {
@@ -95,21 +95,21 @@ const ImageSlider: React.FC = () => {
 
     // Reset values
     setTouchPosition({
-      xDown: null,
-      yDown: null,
+      xDown: 0,
+      yDown: 0,
     });
   };
 
   useEffect(() => {
     // Reset touch position on unmount
     return () => {
-      setTouchPosition({ xDown: null, yDown: null });
+      setTouchPosition({ xDown: 0, yDown: 0 });
     };
   }, []);
 
   return (
     <div 
-      style={{ width: '80%', height: '500px', margin: '0 auto' }}
+      style={{ width: '100%', height: '500px', margin: '0 auto' }}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
     >
