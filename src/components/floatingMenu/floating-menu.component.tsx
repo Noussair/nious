@@ -41,7 +41,7 @@ const FloatingMenu: React.FC = () => {
   return (
     <div onMouseMove={handleMouseMove} className="menu-btn flex justify-center mt-10">
      <button onClick={toggleMenu} ref={buttonRef} style={{ zIndex: 9999 }}
-        className={`bg-green rounded-full p-4 shadow-lg flex items-center justify-center`}
+        className={`bg-green rounded-full lg:p-4 p-2 shadow-lg flex items-center justify-center`}
       >
         {menuOpen ? (
           // SVG for 'X' icon
