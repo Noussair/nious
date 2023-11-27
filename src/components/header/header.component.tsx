@@ -4,6 +4,7 @@ import { faAtom } from '@fortawesome/free-solid-svg-icons'
 import logo from '../../assets/logo.png'
 import './header.css'
 import ImageSlider from '../carrousel/imageSlider.component';
+import FloatingMenu from '../floatingMenu/floating-menu.component';
 const Header = () => {
     const Links = [
         { name: "About Nious", link: "#about-nious" },
@@ -21,10 +22,6 @@ const Header = () => {
                 <div className='font-bold text-2xl cursor-pointer flex items-center gap-1'>
                     <img width={120} height={50} src={logo} alt="" />
                 </div>
-                {/* Menu icon */}
-                <div onClick={() => setOpen(!open)} className='absolute right-8 top-6 cursor-pointer md:hidden w-7 h-7'>
-                    {open ? <FontAwesomeIcon icon={faAtom} /> : <FontAwesomeIcon icon={faAtom} />}
-                </div>
                 {/* linke items */}
                 <ul className={`md:flex bg-grey hidden rounded-full md:items-center md:pb-0 pb-12 md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-12' : 'top-[-490px]'}`}>
                     {Links.map((link, index) => (
@@ -41,6 +38,7 @@ const Header = () => {
                 </div>
             </div>
         </header>
+        {/* <FloatingMenu></FloatingMenu> */}
         <div style={{zIndex:100}} className='absolute top-40 left-0 right-0'>
 
         <ImageSlider ></ImageSlider>

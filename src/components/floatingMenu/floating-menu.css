@@ -1,0 +1,62 @@
+.flipped {
+    background-color: white !important;
+  transform: rotateY(180deg);
+  transition: transform 0.5s;
+ }
+
+ .menu-items-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Take up the full height of the parent */
+    padding-top: 5rem; /* Adjust padding to ensure menu items are vertically centered */
+  }
+  
+  .menu-item {
+    font-weight: 900; /* Make the text extra bold */
+    font-size: 3rem; /* Increase font size */
+    line-height: 1.2; /* Adjust line height for better readability */
+    margin: 20px 0; /* Add more space between items */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    text-transform: uppercase; /* Optional: transform text to uppercase for a more impactful menu */
+  }
+  
+  .menu-item:hover {
+    transform: scale(1.05); /* Slightly enlarge the menu item on hover */
+  }
+  
+  /* Ensure the menu background extends full height */
+  .fixed.bg-green {
+    height: 100%;
+  }
+
+  @keyframes slideOutAndIn {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+    .menu-btn{
+        width: 100%;
+        /* text-align: center; */
+        /* margin: 0 auto; */
+        margin-top: 0 !important;
+        z-index: 9999;
+        position: fixed;
+        top: 0;
+        padding: 0.5rem !important;
+    }
+   
+  }
+
+
+  
+  

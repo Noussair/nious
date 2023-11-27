@@ -8,10 +8,9 @@ interface ArticleProps {
 
 const Article: React.FC<ArticleProps> = ({ title, content, graphicColor }) => {
   return (
-    <div className="flex w-full justify-center items-center bg-gray-200 p-8">
-      
+    <div className="flex w-full md:text-center sm:text-center justify-center items-center bg-gray-200 p-8">
         
-          <div className="flex-1 md:flex hidden flex-col items-baseline justify-center">
+          <div className="flex-1    md:flex hidden flex-col items-baseline justify-center">
             {/* Placeholder for the graphic, replace with actual graphic or component */}
             <div style={{ borderRadius: '70px' }} className={`bg-${graphicColor} flex m-auto p-32 mt-4 w-16 relative`}>
               {/* Example of circles to simulate the particles */}

@@ -6,6 +6,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import './article.css';
 import Article from './components/article.component';
 import Arrow from '../arrow/arrow.component';
+import FloatingMenu from '../floatingMenu/floating-menu.component';
 
 const MenuButton: React.FC = () => {
   return (
@@ -113,7 +114,7 @@ const ArticleSection: React.FC = () => {
 
   return (
     <>
-      <MenuButton />
+      <FloatingMenu></FloatingMenu>
       <div id="solutions" className="relative bg-gray-200 p-10">
       <div className="blur-overlay-top"></div>
     <div className="blur-overlay-bottom"></div>

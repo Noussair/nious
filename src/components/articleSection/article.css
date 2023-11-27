@@ -6,7 +6,7 @@
     right: 0;
     z-index: 10;
     display: block;
-    height: 100px; /* Height of the blurred edge */
+    height: 75px; /* Height of the blurred edge */
     pointer-events: none;
   }
   
@@ -54,7 +54,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  height: 300px; /* Adjust the height as needed */
+  height: 150px; /* Adjust the height as needed */
   pointer-events: none;
   z-index: 10;
 }
@@ -67,4 +67,8 @@
 .blur-overlay-bottom {
   bottom: 0;
   background: linear-gradient(to top, rgba(255, 255, 255, 0.8), transparent);
+}
+
+.bg-darker{
+  background-color: #6d6d6d;
 }
