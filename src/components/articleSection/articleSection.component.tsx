@@ -7,34 +7,6 @@ import './article.css';
 import Article from './components/article.component';
 import Arrow from '../arrow/arrow.component';
 import FloatingMenu from '../floatingMenu/floating-menu.component';
-
-const MenuButton: React.FC = () => {
-  return (
-    <div className="flex justify-center mt-10">
-      <button
-        className="animate-pulse bg-green rounded-full p-4 shadow-lg flex items-center justify-center"
-      >
-        <svg
-          className="w-6 h-6 text-white"
-          fill="none"
-          stroke="white"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M4 6h16M4 12h16m-7 6h7"
-          ></path>
-        </svg>
-      </button>
-    </div>
-  );
-};
-
-
-
 interface ArticleData {
   title: string;
   content: string;
