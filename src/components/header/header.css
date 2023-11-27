@@ -48,10 +48,36 @@
 	}
 }
 
-/* Rest of your existing styles */
 .content {
   width: 100%;
   position: relative;
   z-index: 99;
   text-align: center;
+}
+
+
+@media only screen and (max-width: 767px) {
+
+  #header:before,
+  #header:after {
+    transform: scaleX(3.8); /* Adjust the scale as per the smaller screen */
+  }
+
+  .content {
+    /* Adjust text size, margins, or other properties for smaller screens */
+    font-size: 14px;
+  }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  #header:before,
+  #header:after {
+    transform: scaleX(3); /* Adjust the scale for medium screens */
+  }
+
+  .content {
+    /* Adjustments for medium screen text size, margins, etc. */
+    font-size: 16px;
+  }
 }

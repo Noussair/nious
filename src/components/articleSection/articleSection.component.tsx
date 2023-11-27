@@ -4,8 +4,8 @@
 
 import React, { useRef, useState, useEffect } from 'react';
 import './article.css';
-import Arrow from '../arrow/arrow.component';
 import Article from './components/article.component';
+import Arrow from '../arrow/arrow.component';
 
 const MenuButton: React.FC = () => {
   return (
@@ -32,13 +32,15 @@ const MenuButton: React.FC = () => {
   );
 };
 
+
+
 interface ArticleData {
   title: string;
   content: string;
   graphicColor: string;
 }
 
-const ArticleSection = () => {
+
   const articles: ArticleData[] = [
     {
       title: 'Article 1',
@@ -65,97 +67,70 @@ const ArticleSection = () => {
       content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit',
       graphicColor: 'green',
     },
-    // Add more articles as needed
   ];
+
+const ArticleSection: React.FC = () => {
   const ArticleContainerRef = useRef<HTMLDivElement>(null);
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const [visibleArticles, setVisibleArticles] = useState<number[]>([]);
+  const ScrollContainerRef = useRef<HTMLDivElement>(null);
+  const [visibleArticles, setVisibleArticles] = useState<Set<number>>(new Set());
 
-  
 
-  const scrollToElement = (e:any) => {
+  const scrollToElement = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     e.stopPropagation();
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest'
-      });
-    }
+    ScrollContainerRef.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest'
+    });
   };
 
   const handleIntersection = (entries: IntersectionObserverEntry[]) => {
-    let newVisibleIndices: number[] = [];
-  
-    entries.forEach((entry) => {
-      const index = Number(entry.target.id);
-  
-      if (entry.isIntersecting) {
-        if (entry.intersectionRatio >= 0.2) {
-          // If more than 50% visible, consider it fully visible
-          newVisibleIndices.push(index);
-        }
+    const newVisibleIndices = new Set(visibleArticles);
+
+    entries.forEach(entry => {
+      const index = Number(entry.target.getAttribute('id'));
+      if (entry.isIntersecting && entry.intersectionRatio === 1) {
+        newVisibleIndices.add(index);
       } else {
-        // If not intersecting, consider it leaving the container
-        newVisibleIndices.push(index);
+        newVisibleIndices.delete(index);
       }
     });
-    console.log(newVisibleIndices);
-    if (newVisibleIndices.length === articles.length +1){
-      newVisibleIndices = [];
-    }
-    
+
     setVisibleArticles(newVisibleIndices);
   };
 
   useEffect(() => {
     const observer = new IntersectionObserver(handleIntersection, {
-      root: document.getElementById('solutions'),
-      rootMargin: '500px',
-      threshold: 0.4, // Adjust the threshold as needed
+      root: ArticleContainerRef.current, // Setting the root to the scrolling container
+      rootMargin: '0px',
+      threshold: 1.0, // 100% visibility
     });
 
-    if (ArticleContainerRef.current) {
-      const articles = ArticleContainerRef.current.children;
-      Array.from(articles).forEach((article) => {
-        observer.observe(article);
-      });
-    }
+    const articlesElements = ArticleContainerRef.current?.children;
+    articlesElements && Array.from(articlesElements).forEach(article => observer.observe(article));
 
-    return () => {
-      observer.disconnect();
-    };
-  }, [ArticleContainerRef]);
-
-  
+    return () => observer.disconnect();
+  }, [visibleArticles]);
 
   return (
     <>
       <MenuButton />
       <div id="solutions" className="relative bg-gray-200 p-10">
-        <div id="blur-container" className="blur-edge  bg-darker"></div>
-        <div
-          id="disable-scroll"
-          style={{ maxHeight: '700px' }}
-          className="relative overflow-y-scroll"
-          ref={ArticleContainerRef}
-        >
+      <div className="blur-overlay-top"></div>
+    <div className="blur-overlay-bottom"></div>
+        <div id="disable-scroll" ref={ArticleContainerRef} className="overflow-y-scroll" style={{ maxHeight: '700px' }}>
           {articles.map((article, index) => (
-  <div id={`${index}`} ref={scrollContainerRef} key={index}>
-    <Article
-      title={article.title}
-      content={article.content}
-      graphicColor={
-        visibleArticles.length > 0 && visibleArticles.includes(index)
-          ? 'darker'
-          : 'green'
-      }
-    />
-  </div>
-))}
-          <div className="sticky bottom-10 left-0">
+            <div id={`${index}`} ref={ScrollContainerRef} key={index}>
+              <Article
+                title={article.title}
+                content={article.content}
+                graphicColor={visibleArticles.has(index) ? 'green' : 'darker'}
+              />
+            </div>
+          ))}
+        </div>
+        <div className="sticky bottom-10 left-0">
             <Arrow onClick={scrollToElement} direction="down" />
           </div>
-        </div>
       </div>
     </>
   );

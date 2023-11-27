@@ -43,3 +43,38 @@ footer:before{
     transform: scaleX(3);
 }
   
+
+@media only screen and (max-width: 767px) {
+
+  footer {
+    margin-top: 5em; /* Reduced margin-top for smaller screens */
+    padding: 5em 0; /* Reduced padding for smaller screens */
+  }
+
+  footer:before {
+    transform: scaleX(3.8); /* Adjust the scale to fit smaller screens */
+  }
+
+  .content {
+    /* Adjust font size, color, or other properties for readability on small screens */
+    font-size: 14px;
+  }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+  footer {
+    margin-top: 7.5em; /* Adjust margin-top for medium screens */
+    padding: 7.5em 0; /* Adjust padding for medium screens */
+  }
+
+  footer:before {
+    transform: scaleX(3); /* Scale adjustment for medium screens */
+  }
+
+  .content {
+    /* Adjustments for medium screen text size, color, etc. */
+    font-size: 16px;
+  }
+}
