@@ -2,9 +2,9 @@
 
 type ArrowProps = {
   direction: 'up' | 'down' | 'left' | 'right';
-  onClick:any | undefined
+  onClick: any | undefined
 };
-
+import './arrow.css'
 const Arrow = ({onClick, direction }: ArrowProps) => {
   const rotation = {
     up: 'rotate-180',
@@ -14,11 +14,10 @@ const Arrow = ({onClick, direction }: ArrowProps) => {
   };
 
   const gradientStyle = {
-    background: 'linear-gradient(47deg, rgba(115,124,243,1) 0%, rgba(61,166,219,1) 35%, rgba(13,204,196,1) 100%)',
-    marginLeft:'85%'  };
+    background: 'linear-gradient(47deg, rgba(115,124,243,1) 0%, rgba(61,166,219,1) 35%, rgba(13,204,196,1) 100%)'};
 
   return (
-    <button onClick={onClick} className="flex items-center mr-0 mt-2 justify-center w-16 h-16 cursor-pointer rounded-full shadow-lg animate-pulse" style={gradientStyle}>
+    <button onClick={onClick} className="flex btn items-center mr-0 mt-2 justify-center w-16 h-16 cursor-pointer rounded-full shadow-lg animate-pulse" style={gradientStyle}>
       <svg
         className={`w-10 h-10 text-white ${rotation[direction]}`} // Increased size from w-5 h-5 to w-12 h-12
         fill="white"

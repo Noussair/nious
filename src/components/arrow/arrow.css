@@ -12,4 +12,13 @@
   .animate-pulse {
     animation: pulse 2s infinite ease-in-out;
   }
-  
+.btn{
+  margin-left: 85%;
+}  
+
+  @media only screen and (max-width: 767px) {
+.btn{
+  margin-left: 80% !important;
+}
+    
+  }
