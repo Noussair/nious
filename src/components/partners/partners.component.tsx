@@ -6,13 +6,6 @@ const CircleShape = () => {
         <div style={{ width: '15rem', borderRadius:'100px',backgroundColor:'#cccccc' }} className="bg-grey shadow-md rounded-full w-64 h-64"></div>
     );
 };
-
-
-
-
-
-
-
 const slides  = [
     <CircleShape></CircleShape>,
     <CircleShape></CircleShape>,
@@ -55,7 +48,9 @@ const PartnerSection = () => {
             breakpoint: 480,
             settings: {
               slidesToShow: 1,
-              slidesToScroll: 1
+              slidesToScroll: 1,
+              centerMode: true,
+              centerPadding:'0px'
             }
           }
         ]
@@ -66,7 +61,7 @@ const PartnerSection = () => {
 PARTNERS / CLIENTS / EVENTS</h1>
          <Slider {...settings}>
                     {slides.map((_slide,index)=>{
-                        return (<div key={index}>
+                        return (<div  key={index}>
                             <CircleShape ></CircleShape>
                         </div>)
                     })}

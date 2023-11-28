@@ -2,7 +2,8 @@
 
 import logo from '../../assets/logo.png'
 import './header.css'
-import ImageSlider from '../carrousel/imageSlider.component';
+import Slider from '../slider/slider.component';
+
 const Header = () => {
     const Links = [
         { name: "About Nious", link: "#about-nious" },
@@ -10,6 +11,19 @@ const Header = () => {
         { name: "Contact Us", link: "#contact-us" },
 
     ];
+
+    const slides = [
+        { url: 'https://swiperjs.com/demos/images/nature-1.jpg', alt: 'Image 1' },
+        { url: 'https://swiperjs.com/demos/images/nature-2.jpg', alt: 'Image 2' },
+        { url: 'https://swiperjs.com/demos/images/nature-3.jpg', alt: 'Image 3' },
+        { url: 'https://swiperjs.com/demos/images/nature-4.jpg', alt: 'Image 4' },
+        { url: 'https://swiperjs.com/demos/images/nature-5.jpg', alt: 'Image 5' },
+        { url: 'https://swiperjs.com/demos/images/nature-6.jpg', alt: 'Image 6' },
+        { url: 'https://swiperjs.com/demos/images/nature-7.jpg', alt: 'Image 7' },
+        { url: 'https://swiperjs.com/demos/images/nature-8.jpg', alt: 'Image 8' },
+        { url: 'https://swiperjs.com/demos/images/nature-9.jpg', alt: 'Image 9' },
+        { url: 'https://swiperjs.com/demos/images/nature-10.jpg', alt: 'Image 10' },
+    ]
 
     return (
         <>
@@ -38,7 +52,7 @@ const Header = () => {
         {/* <FloatingMenu></FloatingMenu> */}
         <div style={{zIndex:100}} className='absolute top-40 left-0 right-0'>
 
-        <ImageSlider ></ImageSlider>
+        <Slider slides={slides} />
         </div>
         </>
     );

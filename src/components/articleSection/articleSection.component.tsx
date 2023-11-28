@@ -56,22 +56,23 @@ const ArticleSection: React.FC = () => {
     });
   };
 
-  const handleIntersection = (entries: IntersectionObserverEntry[]) => {
-    const newVisibleIndices = new Set(visibleArticles);
-
-    entries.forEach(entry => {
-      const index = Number(entry.target.getAttribute('id'));
-      if (entry.isIntersecting && entry.intersectionRatio === 1) {
-        newVisibleIndices.add(index);
-      } else {
-        newVisibleIndices.delete(index);
-      }
-    });
-
-    setVisibleArticles(newVisibleIndices);
-  };
+  
 
   useEffect(() => {
+    const handleIntersection = (entries: IntersectionObserverEntry[]) => {
+      const newVisibleIndices = new Set(visibleArticles);
+  
+      entries.forEach(entry => {
+        const index = Number(entry.target.getAttribute('id'));
+        if (entry.isIntersecting && entry.intersectionRatio === 1) {
+          newVisibleIndices.add(index);
+        } else {
+          newVisibleIndices.delete(index);
+        }
+      });
+  
+      setVisibleArticles(newVisibleIndices);
+    };
     const observer = new IntersectionObserver(handleIntersection, {
       root: ArticleContainerRef.current, // Setting the root to the scrolling container
       rootMargin: '0px',
@@ -85,7 +86,7 @@ const ArticleSection: React.FC = () => {
   }, [visibleArticles]);
 
   return (
-    <>
+    <div style={{height:'100vh'}}>
       <FloatingMenu></FloatingMenu>
       <div id="solutions" className="relative bg-gray-200 p-10">
       <div className="blur-overlay-top"></div>
@@ -105,7 +106,7 @@ const ArticleSection: React.FC = () => {
             <Arrow onClick={scrollToElement} direction="down" />
           </div>
       </div>
-    </>
+    </div>
   );
 };
 

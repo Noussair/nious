@@ -72,3 +72,11 @@
 .bg-darker{
   background-color: #6d6d6d;
 }
+
+
+.parallax {
+  background-attachment: fixed; /* This is crucial for the parallax effect */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

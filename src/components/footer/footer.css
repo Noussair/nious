@@ -54,7 +54,11 @@ footer:before{
   footer:before {
     transform: scaleX(3.8); /* Adjust the scale to fit smaller screens */
   }
-
+.social-media-links{
+  align-items: center !important;
+  justify-content: center !important;
+  margin-top: 1rem;
+}
   .content {
     /* Adjust font size, color, or other properties for readability on small screens */
     font-size: 14px;

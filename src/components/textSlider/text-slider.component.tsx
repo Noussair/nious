@@ -69,7 +69,7 @@ const TextSlider: React.FC = () => {
         <div className="flex" style={slideStyle}>
           {texts.map((text, idx) => (
             <div className="flex-none text-light w-full text-start px-4" key={idx}>
-              <p className="text-white px-4  text-3xl">{text}</p>
+              <p className="text-white px-4  lg:text-3xl">{text}</p>
             </div>
           ))}
         </div>
