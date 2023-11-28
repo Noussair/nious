@@ -32,7 +32,7 @@
   border-radius: 0 0 50% 50% / 0 0 100% 100%;
   animation: gradient 3s ease infinite;
   background-size: 400% 400% !important;
-  background: linear-gradient(90deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(90deg, #7978F6, #23a6d5, #04D3C0);
   transform: scaleX(2.8);
 }
 
