@@ -1,25 +1,3 @@
-/* Stronger blur effect */
-.blur-edge::before, .blur-edge::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    display: block;
-    height: 75px; /* Height of the blurred edge */
-    pointer-events: none;
-  }
-  
-  .blur-edge::before {
-    top: 0;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.9), transparent); /* Stronger effect */
-  }
-  
-  .blur-edge::after {
-    bottom: 0;
-    background: linear-gradient(to top, rgba(255,255,255,0.9), transparent); /* Stronger effect */
-  }
-  
 
 .article-container {
   position: static;
@@ -28,10 +6,10 @@
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  max-width: 1300px;
+  max-width: 1000px;
   margin-right: auto;
   margin-left: auto;
-  padding-top: 60px;
+  padding-top: 40px;
   padding-bottom: 60px;
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
@@ -80,24 +58,6 @@
 }
 
 
-.blur-overlay-top, .blur-overlay-bottom {
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 150px; /* Adjust the height as needed */
-  pointer-events: none;
-  z-index: 10;
-}
-
-.blur-overlay-top {
-  top: 0;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), transparent);
-}
-
-.blur-overlay-bottom {
-  bottom: 0;
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.8), transparent);
-}
 
 .bg-darker{
   background-color: #6d6d6d;
@@ -106,9 +66,24 @@
 }
 
 
-.parallax {
-  background-attachment: fixed; /* This is crucial for the parallax effect */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
+
+
+.shadow-effect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 50px; /* Adjust the height of the shadow effect as needed */
+  z-index: 1;
 }
+
+.shadow-effect.top {
+  top: -83px;
+  box-shadow: 2px 63px 20px rgba(255, 255, 255, 1); /* Adjust the shadow color and strength as needed */
+}
+
+.shadow-effect.bottom {
+  bottom: 76px;
+  box-shadow: 2px 101px 20px rgba(255, 255, 255, 1) /* Adjust the shadow color and strength as needed */
+}
+
