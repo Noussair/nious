@@ -6,7 +6,6 @@ import React, { useRef, useState, useEffect } from 'react';
 import './article.css';
 import Arrow from '../arrow/arrow.component';
 import FloatingMenu from '../floatingMenu/floating-menu.component';
-import ArticleContainer from '../ArticleContainer.component';
 import Article from '../Article.component';
 import ArticleShape from '../ArticleShape.component';
 interface ArticleData {
@@ -151,7 +150,7 @@ const ArticleSection: React.FC = () => {
         />
       </div>
       {articles.map((article, index) => (
-        <div className='article-container' id={`shape-${index}`} data-index={index} key={index}>
+        <div className='article-container'  id={`shape-${index}`} data-index={index} key={index}>
           <ArticleShape
             shapeColor={index === visibleArticleIndex ? 'green' : 'darker'}
           />
@@ -169,7 +168,7 @@ const ArticleSection: React.FC = () => {
   
   <div ref={ArticleContainerRef} id="disable-scroll" className="overflow-y-scroll " style={{ maxHeight: '700px' }}>
     {articles.map((article, index) => (
-      <div className='article-container' id={`${index}`} data-index={index} key={index}>
+      <div className='article-container' ref={ScrollContainerRef} id={`${index}`} data-index={index} key={index}>
         <Article
           title={article.title}
           content={article.content}
