@@ -1,12 +1,17 @@
+.translate-y-0{
+  --tw-translate-y: -250px !important;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
+}
 #header {
   position: relative;
   z-index: 100;
   width: 100%;
+  height: 51vh;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  padding-bottom: 50em;
+  /* padding-bottom: 50rem; */
 }
 
 #header:before {
@@ -55,12 +60,57 @@
   text-align: center;
 }
 
-
-@media only screen and (max-width: 767px) {
-
+@media only screen and (min-width: 350px) and  (max-width: 420px) {
+  #header{
+    height: 75vh;
+  }
   #header:before,
   #header:after {
-    transform: scaleX(3.8); /* Adjust the scale as per the smaller screen */
+    transform: scaleX(6); /* Adjust the scale as per the smaller screen */
+  }
+
+  .content {
+    /* Adjust text size, margins, or other properties for smaller screens */
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 421px) and  (max-width: 500px) {
+  #header{
+    height: 65vh;
+  }
+  #header:before,
+  #header:after {
+    transform: scaleX(6); /* Adjust the scale as per the smaller screen */
+  }
+
+  .content {
+    /* Adjust text size, margins, or other properties for smaller screens */
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 501) and  (max-width: 560px) {
+  #header{
+    height: 60vh;
+  }
+  #header:before,
+  #header:after {
+    transform: scaleX(6); /* Adjust the scale as per the smaller screen */
+  }
+
+  .content {
+    /* Adjust text size, margins, or other properties for smaller screens */
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 560px) and  (max-width: 767px) {
+  #header{
+    height: 60vh;
+  }
+  #header:before,
+  #header:after {
+    transform: scaleX(6); /* Adjust the scale as per the smaller screen */
   }
 
   .content {

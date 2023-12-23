@@ -5,3 +5,8 @@
     background-repeat: 'no-repeat';
     background-color: red;
 }
+.custom-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

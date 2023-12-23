@@ -168,7 +168,7 @@ const ArticleSection: React.FC = () => {
   
   <div ref={ArticleContainerRef} id="disable-scroll" className="overflow-y-scroll " style={{ maxHeight: '700px' }}>
     {articles.map((article, index) => (
-      <div className='article-container' ref={ScrollContainerRef} id={`${index}`} data-index={index} key={index}>
+      <div className='article-container padding-2' ref={ScrollContainerRef} id={`${index}`} data-index={index} key={index}>
         <Article
           title={article.title}
           content={article.content}

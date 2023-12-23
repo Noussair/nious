@@ -3,7 +3,7 @@ import ArticleSection from '../articleSection/articleSection.component'
 import PartnerSection from '../partners/partners.component'
 import ThirdSection from '../thirdSection/thirdSection.component'
 import Arrow from '../arrow/arrow.component'
-
+import './layout.css'
 function Layout() {
   const scrollToTop = () => {
     window.scrollTo({
