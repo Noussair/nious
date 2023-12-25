@@ -17,7 +17,7 @@ const Footer = () => {
       <div className="flex w-full md:flex-row flex-col">
         {/* First Section */}
         <div className="footer-section w-full ">
-          <h5 className="font-bold text-3xl text-green mb-2">Quick Links</h5>
+          <h5 className="font-bold text-2xl text-green mb-2">Quick Links</h5>
           <ul>
             <li><a href="#" className="hover:text-light">About Us</a></li>
             <li><a href="#" className="hover:text-light">Our Team</a></li>
@@ -28,7 +28,7 @@ const Footer = () => {
 
         {/* Second Section */}
         <div className="footer-section w-full">
-          <h5 className="font-bold text-3xl text-green mb-2">Services</h5>
+          <h5 className="font-bold text-2xl text-green mb-2">Services</h5>
           <ul>
             <li><a href="#" className="hover:text-light">Web Development</a></li>
             <li><a href="#" className="hover:text-light">Marketing</a></li>
@@ -39,7 +39,7 @@ const Footer = () => {
 
         {/* Third Section */}
         <div className="footer-section w-full ">
-          <h5 className="font-bold text-3xl text-green mb-2">Legal</h5>
+          <h5 className="font-bold text-2xl text-green mb-2">Legal</h5>
           <ul>
             <li><a href="#" className="hover:text-light">Terms of Service</a></li>
             <li><a href="#" className="hover:text-light">Privacy Policy</a></li>

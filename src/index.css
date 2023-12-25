@@ -20,7 +20,7 @@ html {
   scroll-behavior: smooth;
 }
 
-html::-webkit-scrollbar {
+/* html::-webkit-scrollbar {
   width: 0px;
 }
 
@@ -38,7 +38,7 @@ html::-webkit-scrollbar-track {
 
 html:hover::-webkit-scrollbar-track {
   background-color: transparent;
-}
+} */
 
 body {
   margin: 0;

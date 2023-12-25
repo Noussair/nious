@@ -5,7 +5,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import './article.css';
 import Article from './components/article.component';
-import Arrow from '../arrow/arrow.component';
 import FloatingMenu from '../floatingMenu/floating-menu.component';
 interface ArticleData {
   title: string;
@@ -55,15 +54,8 @@ const articles: ArticleData[] = [
 const ArticleSection: React.FC = () => {
   const ArticleContainerRef = useRef<HTMLDivElement>(null);
   const [visibleArticleIndex, setVisibleArticleIndex] = useState<number | null>(null);
-  const ScrollContainerRef = useRef<HTMLDivElement>(null);
 
-  const scrollToElement = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    e.stopPropagation();
-    ScrollContainerRef.current?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'nearest'
-    });
-  };
+
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -104,9 +96,7 @@ const ArticleSection: React.FC = () => {
           </div>
         ))}
       </div>
-      <div className="sticky bottom-10 left-0">
-        <Arrow onClick={scrollToElement} direction="down" />
-      </div>
+      
 
     </div>
   );

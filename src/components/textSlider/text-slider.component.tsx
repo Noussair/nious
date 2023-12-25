@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import './styles.css'
 const texts: string[] = [
     `Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.`,
     `Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.`,
@@ -69,7 +69,7 @@ const TextSlider: React.FC = () => {
         <div className="flex" style={slideStyle}>
           {texts.map((text, idx) => (
             <div className="flex-none text-light w-full text-start px-4" key={idx}>
-              <p className="text-white px-4  lg:text-3xl">{text}</p>
+              <p className="text-white px-4 text-xl">{text}</p>
             </div>
           ))}
         </div>

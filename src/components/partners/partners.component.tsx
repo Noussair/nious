@@ -3,7 +3,15 @@ import Slider from "react-slick";
 
 const CircleShape = () => {
     return (
-        <div style={{ width: '15rem', borderRadius:'100px',backgroundColor:'#cccccc' }} className="bg-grey shadow-md rounded-full w-64 h-64"></div>
+      <div
+      style={{
+        width: "10rem", // Adjusted size
+        height: "10rem", // Added height property
+        borderRadius: "100px",
+        backgroundColor: "#cccccc",
+      }}
+      className="bg-grey shadow-md rounded-full"
+    ></div>
     );
 };
 const slides  = [

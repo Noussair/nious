@@ -1,84 +1,86 @@
 .divider{
-    border: 1px solid #969696 !important ;
+  border: 1px solid #969696 !important ;
 }
 
 footer{
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    margin-top: 10em;
-    padding: 10em 0;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 1rem;
+  padding: 2em 0;
+}
+
+
+.content{
+  width: 100%;
+  color: #260645;
+  position: relative;
+  z-index: 9999;
+  text-align: center;
 }
   
   
-  .content{
-    width: 100%;
-    color: #260645;
-    position: relative;
-    z-index: 9999;
-    text-align: center;
-  }
-    
-    
 footer:before{
-    z-index: 1;
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #262626;
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #262626;
-    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
-    transform: scaleX(3);
+  z-index: 1;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #262626;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #262626;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  transform: scaleX(3);
 }
-  
+.text-2xl{
+font-size: 1.75rem;
+}
 
 @media only screen and (max-width: 767px) {
 
-  footer {
-    margin-top: 5em; /* Reduced margin-top for smaller screens */
-    padding: 5em 0; /* Reduced padding for smaller screens */
-  }
-
-  footer:before {
-    transform: scaleX(3.8); /* Adjust the scale to fit smaller screens */
-  }
-.social-media-links{
-  align-items: center !important;
-  justify-content: center !important;
-  margin-top: 1rem;
+footer {
+  margin-top: 5em; /* Reduced margin-top for smaller screens */
+  padding: 5em 0; /* Reduced padding for smaller screens */
 }
-  .content {
-    /* Adjust font size, color, or other properties for readability on small screens */
-    font-size: 14px;
-  }
+
+footer:before {
+  transform: scaleX(6); /* Adjust the scale to fit smaller screens */
+}
+.social-media-links{
+align-items: center !important;
+justify-content: center !important;
+margin-top: 1rem;
+}
+.content {
+  /* Adjust font size, color, or other properties for readability on small screens */
+  font-size: 14px;
+}
 }
 
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 
-  footer {
-    margin-top: 7.5em; /* Adjust margin-top for medium screens */
-    padding: 7.5em 0; /* Adjust padding for medium screens */
-  }
+footer {
+  margin-top: 7.5em; /* Adjust margin-top for medium screens */
+  padding: 7.5em 0; /* Adjust padding for medium screens */
+}
 
-  footer:before {
-    transform: scaleX(3); /* Scale adjustment for medium screens */
-  }
+footer:before {
+  transform: scaleX(3); /* Scale adjustment for medium screens */
+}
 
-  .content {
-    /* Adjustments for medium screen text size, color, etc. */
-    font-size: 16px;
-  }
+.content {
+  /* Adjustments for medium screen text size, color, etc. */
+  font-size: 16px;
+}
 }
