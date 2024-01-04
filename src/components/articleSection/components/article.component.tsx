@@ -1,5 +1,5 @@
 import React from 'react';
-
+import DOMPurify from 'dompurify';
 interface ArticleProps {
   title: string;
   content: string;
@@ -7,6 +7,7 @@ interface ArticleProps {
 }
 
 const Article: React.FC<ArticleProps> = ({ title, content, graphicColor }) => {
+  const sanitizedContent = { __html: DOMPurify.sanitize(content)};
   return (
     <>
     <div className="header-container">
@@ -25,7 +26,7 @@ const Article: React.FC<ArticleProps> = ({ title, content, graphicColor }) => {
             {/* Text content */}
             <div className="mb-8">
               <h2 className="text-4xl font-bold text-grey mb-2">{title}</h2>
-              <p className="text-grey">{content}</p>
+              <div className="text-grey hyphens-auto"dangerouslySetInnerHTML={sanitizedContent}></div>
             </div>
           </div>
     </>
