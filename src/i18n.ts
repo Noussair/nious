@@ -21,20 +21,23 @@ i18n
     },
   });
 
-  const loadTranslations = async () => {
-    const languages = ['en', 'fr', 'de']; // Add more languages as needed
+const loadTranslations = async () => {
+  const browserLanguage = navigator.language.split('-')[0]; // Get the language code (e.g., "en" from "en-US")
+  const languages = ['en', 'fr', 'de'];
+  console.log(browserLanguage);
   
-    const translationPromises = languages.map(async (language) => {
-      const translation = await import(`../public/locales/${language}/translation.json`);
-      i18n.addResourceBundle(language, 'translation', translation.default, true, false);
-    });
+  // If the browser language is supported, set it as the initial language; otherwise, use the default language.
+  const initialLanguage = languages.includes(browserLanguage) ? browserLanguage : languages[0];
   
-    await Promise.all(translationPromises);
-  
-    // Set the language to the initial language
-    const initialLanguage = i18n.language || languages[0];
-    await i18n.changeLanguage(initialLanguage);
-  };
+  const translationPromises = languages.map(async (language) => {
+    const translation = await import(`../public/locales/${language}/translation.json`);
+    i18n.addResourceBundle(language, 'translation', translation.default, true, false);
+  });
+
+  await Promise.all(translationPromises);
+
+  await i18n.changeLanguage(initialLanguage);
+};
 
 loadTranslations();
 
