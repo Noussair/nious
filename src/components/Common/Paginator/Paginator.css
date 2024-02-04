@@ -1,0 +1,8 @@
+#dot-scroll.colors-e li a.active span, #dot-scroll.colors-e li a.target span, #dot-scroll.colors-e li a.target.active span, #dot-scroll.colors-e li a:hover.active span, #dot-scroll.colors-e li a:hover.target span, #dot-scroll.colors-e li a:hover.target.active span {
+    border-color: #04d3c0;
+}
+
+
+#dot-scroll.colors-e li a span {
+    background-color: #04d3c0;
+}
