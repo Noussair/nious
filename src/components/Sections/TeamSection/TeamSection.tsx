@@ -32,7 +32,7 @@ const TeamSection: React.FC = () => {
                             </div>
                             <div className="caption">
                                 <p>
-                                    <span className="title">Mike Johnson</span>
+                                    <span className="title">Lorem ipsum</span>
                                     <br/>
                                     <span className="highlight">CEO &amp; Founder</span>
                                 </p>
@@ -59,7 +59,7 @@ const TeamSection: React.FC = () => {
                             </div>
                             <div className="caption">
                                 <p>
-                                    <span className="title">Jessica Specter</span>
+                                    <span className="title">Lorem ipsum</span>
                                     <br/>
                                     <span className="highlight">Creative Director</span>
                                 </p>
@@ -85,7 +85,7 @@ const TeamSection: React.FC = () => {
                             </div>
                             <div className="caption">
                                 <p>
-                                    <span className="title">Andrew Miles</span>
+                                    <span className="title">Lorem ipsum</span>
                                     <br/>
                                     <span className="highlight">Developer</span>
                                 </p>
@@ -112,9 +112,96 @@ const TeamSection: React.FC = () => {
                             </div>
                             <div className="caption">
                                 <p>
-                                    <span className="title">Lynda Smith</span>
+                                    <span className="title">Lorem ipsum</span>
                                     <br/>
                                     <span className="highlight">Programmer</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div className="col-md-3 col-sm-6  col-xs-6">
+                            <div className="hover-overlay">
+                                <img alt="Lynda Smith" src="images/our-team/7.jpg" title="Lynda Smith" className="fluid-width"/>
+                                <div className="overlay background-90-b">
+                                    <div>
+                                        <p className="text-center text-uppercase heading-b">
+                                            Exercitation ut enim ad minim veniam, quis nostrud ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        </p>
+                                        <div className="separator-small"></div>
+                                        <p className="text-center">
+                                            <a target="_blank" href="https://twitter.com/"><i className="fa fa-twitter heading-b"></i></a>
+                                            <a target="_blank" href="https://www.linkedin.com/"><i className="fa fa-linkedin heading-b"></i></a>
+                                            <a target="_blank" href="https://plus.google.com/"><i className="fa fa-google-plus heading-b"></i></a>
+                                            <a target="_blank" href="https://vimeo.com/"><i className="fa fa-vimeo-square heading-b"></i></a>
+                                            <a target="_blank" href="https://www.tumblr.com/"><i className="fa fa-tumblr heading-b"></i></a>
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <div className="caption">
+                                <p>
+                                    <span className="title">Lorem ipsum</span>
+                                    <br/>
+                                    <span className="highlight">Programmer</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div className="col-md-3 col-sm-6  col-xs-6">
+                            <div className="hover-overlay">
+                                <img alt="Lynda Smith" src="images/our-team/5.jpg" title="Lynda Smith" className="fluid-width"/>
+                                <div className="overlay background-90-b">
+                                    <div>
+                                        <p className="text-center text-uppercase heading-b">
+                                            Exercitation ut enim ad minim veniam, quis nostrud ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        </p>
+                                        <div className="separator-small"></div>
+                                        <p className="text-center">
+                                            <a target="_blank" href="https://twitter.com/"><i className="fa fa-twitter heading-b"></i></a>
+                                            <a target="_blank" href="https://www.linkedin.com/"><i className="fa fa-linkedin heading-b"></i></a>
+                                            <a target="_blank" href="https://plus.google.com/"><i className="fa fa-google-plus heading-b"></i></a>
+                                            <a target="_blank" href="https://vimeo.com/"><i className="fa fa-vimeo-square heading-b"></i></a>
+                                            <a target="_blank" href="https://www.tumblr.com/"><i className="fa fa-tumblr heading-b"></i></a>
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <div className="caption">
+                                <p>
+                                    <span className="title">Lorem ipsum</span>
+                                    <br/>
+                                    <span className="highlight">Data Scientist</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div className="col-md-3 col-sm-6  col-xs-6">
+                            <div className="hover-overlay">
+                                <img alt="Lynda Smith" src="images/our-team/6.jpg" title="Lynda Smith" className="fluid-width"/>
+                                <div className="overlay background-90-b">
+                                    <div>
+                                        <p className="text-center text-uppercase heading-b">
+                                            Exercitation ut enim ad minim veniam, quis nostrud ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        </p>
+                                        <div className="separator-small"></div>
+                                        <p className="text-center">
+                                            <a target="_blank" href="https://twitter.com/"><i className="fa fa-twitter heading-b"></i></a>
+                                            <a target="_blank" href="https://www.linkedin.com/"><i className="fa fa-linkedin heading-b"></i></a>
+                                            <a target="_blank" href="https://plus.google.com/"><i className="fa fa-google-plus heading-b"></i></a>
+                                            <a target="_blank" href="https://vimeo.com/"><i className="fa fa-vimeo-square heading-b"></i></a>
+                                            <a target="_blank" href="https://www.tumblr.com/"><i className="fa fa-tumblr heading-b"></i></a>
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <div className="caption">
+                                <p>
+                                    <span className="title">Lorem ipsum</span>
+                                    <br/>
+                                    <span className="highlight">Creative Director</span>
                                 </p>
                             </div>
                         </div>
