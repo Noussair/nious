@@ -50,13 +50,6 @@ const Sides: React.FC = () => {
 		</div>
 		<div className="page-border bottom colors-e background-solid"><a href="#top" className="hover-effect">To <span className="highlight">Top</span></a></div>
 		<div className="page-border left colors-e background-solid">
-			<ul>
-				<li><a href="https://www.facebook.com/" target="_blank"><i className="fa fa-facebook"></i></a></li>
-				<li><a href="https://twitter.com/" target="_blank"><i className="fa fa-twitter"></i></a></li>
-				<li><a href="https://www.youtube.com/" target="_blank"><i className="fa fa-youtube"></i></a></li>
-				<li><a href="https://vimeo.com/" target="_blank"><i className="fa fa-vimeo-square"></i></a></li>
-				<li><a href="https://www.skype.com/" target="_blank"><i className="fa fa-skype"></i></a></li>
-			</ul>
 		</div>
 		<div className="page-border right colors-e background-solid"></div>
     </>

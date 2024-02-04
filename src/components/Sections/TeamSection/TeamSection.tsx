@@ -22,11 +22,6 @@ const TeamSection: React.FC = () => {
                                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                         </p>
                                         <div className="separator-small"></div>
-                                        <p className="text-center">
-                                            <a target="_blank" href="https://www.facebook.com/"><i className="fa fa-facebook heading-b"></i></a>
-                                            <a target="_blank" href="https://www.youtube.com/"><i className="fa fa-youtube heading-b"></i></a>
-                                            <a target="_blank" href="https://github.com/"><i className="fa fa-github heading-b"></i></a>
-                                        </p>
                                     </div>
                                 </div>
                             </div>
