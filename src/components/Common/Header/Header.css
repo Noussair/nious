@@ -1,0 +1,19 @@
+#top-nav.colors-e .navbar-brand, #top-nav.colors-e .navbar-brand:hover {
+    color: #04d3c0;
+}
+
+#top-nav.colors-e li a {
+    color: #04d3c0;
+}
+
+.colors-e .menu-toggle span, .colors-e .menu-toggle span:after, .colors-e .menu-toggle span:before {
+    background-color: #04d3c0;
+}
+
+#top-nav.colors-e li a:hover {
+    color: #04d3c0;
+}
+
+#top-nav.colors-e .navbar-nav a.active {
+    color: #fff;
+}

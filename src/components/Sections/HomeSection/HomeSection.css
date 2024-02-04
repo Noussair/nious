@@ -1,0 +1,10 @@
+.colors-c .highlight, .colors-c .link, .colors-c.highlight, .colors-c.link {
+    color: #04d3c0;
+}
+
+.colors-c a:hover, a.colors-c:hover {
+    color: #04d3c0;
+}
+.background-60-d {
+    background-color: #04d3c0 !important;
+}
