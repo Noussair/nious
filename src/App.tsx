@@ -8,7 +8,7 @@ import ContactSection from './components/Sections/ContactSection/ContactSection'
 import GalleryOverlay from './components/Sections/GalleryOverlay/GalleryOverlay';
 import HomeSection from './components/Sections/HomeSection/HomeSection';
 import ProcessSection from './components/Sections/ProcessSection/ProcessSection';
-import ServicesSection from './components/Sections/ServicesSection/ServicesSection';
+// import ServicesSection from './components/Sections/ServicesSection/ServicesSection';
 import SkillsSection from './components/Sections/SkillsSection/SkillsSection';
 import TeamSection from './components/Sections/TeamSection/TeamSection';
 import WorkSection from './components/Sections/WorkSection/WorkSection';
