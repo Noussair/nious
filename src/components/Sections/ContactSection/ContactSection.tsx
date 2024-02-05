@@ -31,11 +31,6 @@ const ContactSection: React.FC = () => {
 									<a href="http://www.ouraddress.com">www.ouraddress.com</a>
 								</b>
 									</p>
-									<p className="big-font">
-										<a target="_blank" href="https://twitter.com/"><span className="fa-stack"><i className="fa fa-circle fa-stack-2x heading"></i><i className="fa fa-twitter fa-stack-1x text-background"></i></span></a>
-										<a target="_blank" href="https://www.facebook.com/"><span className="fa-stack"><i className="fa fa-circle fa-stack-2x heading"></i><i className="fa fa-facebook fa-stack-1x text-background"></i></span></a>
-										<a target="_blank" href="https://www.youtube.com/"><span className="fa-stack"><i className="fa fa-circle fa-stack-2x heading"></i><i className="fa fa-youtube fa-stack-1x text-background"></i></span></a>
-									</p>
 								</div>
 							</div>
 							<div className="col-md-6">

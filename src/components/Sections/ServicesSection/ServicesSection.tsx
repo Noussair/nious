@@ -33,16 +33,6 @@ const ServicesSection: React.FC = () => {
                             <h4>Internet<br />Marketing</h4>
                             <p className="highlight">Excepteur ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
                             <p>Excepteur sint occaecat elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
-                            <ul className="simple">
-                                <li>Facebook advertising</li>
-                                <li>SEO and SEM</li>
-                                <li>Facebook apps</li>
-                                <li>Context advertising</li>
-                                <li>Rich media banners</li>
-                                <li>Game development</li>
-                                <li>Content creation</li>
-                                <li>Testing</li>
-                            </ul>
                         </div>
                         <div className="col-md-3 top-line">
                             <h4>Digital<br />production</h4>
@@ -64,16 +54,6 @@ const ServicesSection: React.FC = () => {
                             <h4>Application<br />Development</h4>
                             <p className="highlight">Commodo ipsum dolor sit amet dolore magna aliqua.</p>
                             <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.</p>
-                            <ul className="simple">
-                                <li>Facebook apps</li>
-                                <li>Brand immersion &amp; research</li>
-                                <li>Competitive analysis</li>
-                                <li>Stakeholder interviews</li>
-                                <li>Content audit</li>
-                                <li>Project/platform planning</li>
-                                <li>Technical requirements</li>
-                                <li>Testing</li>
-                            </ul>
                         </div>
                     </div>
                 </div>

@@ -14,14 +14,6 @@ const Footer: React.FC = () => {
 						<div className="footer-description">
 							<p>Mauris metus tellus, lacinia nec efficitur quis, rhoncus et mi.</p>
 						</div>
-						<p className="social-links">
-							<a target="_blank" href="https://www.facebook.com/"><i className="fa fa-facebook"></i></a>
-							<a target="_blank" href="https://twitter.com/"><i className="fa fa-twitter"></i></a>
-							<a target="_blank" href="https://www.youtube.com/"><i className="fa fa-youtube"></i></a>
-							<a target="_blank" href="https://vimeo.com/"><i className="fa fa-vimeo-square"></i></a>
-							<a target="_blank" href="https://www.pinterest.com/"><i className="fa fa-printerest"></i></a>
-							<a target="_blank" href="https://www.linkedin.com/"><i className="fa fa-linkedin"></i></a>
-						</p>
 					</div>
 					<div className="col-md-3">
 						<h5>Additional Links</h5>
