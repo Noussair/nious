@@ -1,3 +1,10 @@
 .colors-e .heading, .colors-e .link, .colors-e.heading, .colors-e.link {
     color: #04d3c0;
 }
+
+#stepIcon svg{
+    color: #04d3c0;
+    height: 1rem;
+    width: 1.5rem;
+    font-size: 35px !important;
+}

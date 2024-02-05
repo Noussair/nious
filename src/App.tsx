@@ -7,9 +7,11 @@ import AboutSection from './components/Sections/AboutSection/AboutSection';
 import ContactSection from './components/Sections/ContactSection/ContactSection';
 import GalleryOverlay from './components/Sections/GalleryOverlay/GalleryOverlay';
 import HomeSection from './components/Sections/HomeSection/HomeSection';
+import PartnersSection from './components/Sections/PartnerSection/PartnerSection';
 import ProcessSection from './components/Sections/ProcessSection/ProcessSection';
 // import ServicesSection from './components/Sections/ServicesSection/ServicesSection';
 import SkillsSection from './components/Sections/SkillsSection/SkillsSection';
+import StatSection from './components/Sections/StatSection/StatSection';
 import TeamSection from './components/Sections/TeamSection/TeamSection';
 import WorkSection from './components/Sections/WorkSection/WorkSection';
 import Sides from './components/UI/Sides/Sides';
@@ -26,9 +28,11 @@ function App() {
     <Video></Video>
     <HomeSection></HomeSection>
     <AboutSection></AboutSection>
+    <PartnersSection></PartnersSection>
     <TeamSection></TeamSection>
     <WorkSection></WorkSection>
     <ProcessSection></ProcessSection>
+    <StatSection></StatSection>
     <SkillsSection></SkillsSection>
     <ContactSection></ContactSection>
     <Footer></Footer>

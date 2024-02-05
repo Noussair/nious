@@ -7,51 +7,6 @@ const AboutSection: React.FC = () => {
     return (
         <section id="about">
             <div className="view">
-                <img alt="" className="bg" src="images/bg/picjumbo/picjumbo.com_IMG_5790.jpg" />
-                <div className="content pane">
-                    <div className="container-fluid">
-                        <div className="row hidden-xs hidden-sm">
-                            <div className="col-md-4 colors-b">
-                                <div className="row">
-                                    <div className="col-xs-12 banner-cell">
-                                        <h3 className="light-font-weight">Responsive</h3>
-                                        <p className="title">Layout</p>
-                                    </div>
-                                    <div className="col-xs-12 success heading-b banner-cell">
-                                        Responsive Styling
-                                        <br /> Retina Ready
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-4 colors-c">
-                                <div className="row">
-                                    <div className="col-xs-12 banner-cell">
-                                        <h3 className="light-font-weight">Parallax</h3>
-                                        <p className="title">Effects</p>
-                                    </div>
-                                    <div className="col-xs-12 warning heading-c banner-cell">
-                                        Highly Optimized
-                                        <br /> Smooth Animations
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-4 colors-d">
-                                <div className="row">
-                                    <div className="col-xs-12 banner-cell">
-                                        <h3 className="light-font-weight">Bootstrap</h3>
-                                        <p className="title">Framework</p>
-                                    </div>
-                                    <div className="col-xs-12 info heading-d banner-cell">
-                                        Adapted for Multicolor Sections
-                                        <br /> Highly Customized
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="view">
                 <div className="content colors-e background-solid">
                     <div className="container">
                         <h2>About</h2>
@@ -84,48 +39,6 @@ const AboutSection: React.FC = () => {
                                     <h4>Client <span className="highlight">Support</span></h4>
                                     <p>Sed porta erat vel ipsum maximus, eget maximus est maximus. Maecenas at venenatis nibh, sit amet suscipit odio. In feugiat vehicula dui. In felis enim, maximus a dolor semper efficitur elit euismod magna quis commodo.</p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="view" id="how-we-work">
-                <div className="content colors-h background-65-dark">
-                    <div className="container">
-                        <h3><span className="highlight">How</span> We Work</h3>
-                        <div className="row">
-                            <div className="col-md-6 col-md-offset-3">
-                                <p className="text-center">Aliquam fermentum massa ac est sollicitudin, at ultricies ligula tristique. Cras finibus, nulla ac convallis feugiat, nisl nisl lobortis est, eget auctor velit magna vel nunc. Donec nec eros rhoncus.</p>
-                            </div>
-                        </div>
-                        <div className="row icon-set">
-                            <div className="col-md-3 text-center">
-                                <p>
-                                    <i className="li_eye circle scroll-in-animation background-20 heading" data-animation="fadeInUp"></i>
-                                </p>
-                                <p className="title"><span className="underline-text">Awesome</span></p>
-                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                            </div>
-                            <div className="col-md-3 text-center">
-                                <p>
-                                    <i className="li_like circle scroll-in-animation background-20 heading" data-animation="fadeInUp"></i>
-                                </p>
-                                <p className="title"><span className="underline-text">Innovative</span></p>
-                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                            </div>
-                            <div className="col-md-3 text-center">
-                                <p>
-                                    <i className="li_paperplane circle scroll-in-animation background-20 heading" data-animation="fadeInUp"></i>
-                                </p>
-                                <p className="title"><span className="underline-text">Creative</span></p>
-                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                            </div>
-                            <div className="col-md-3 text-center">
-                                <p>
-                                    <i className="li_lab circle scroll-in-animation background-20 heading" data-animation="fadeInUp"></i>
-                                </p>
-                                <p className="title"><span className="underline-text">Experimental</span></p>
-                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                             </div>
                         </div>
                     </div>
