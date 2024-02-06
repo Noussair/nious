@@ -8,7 +8,7 @@ const Header: React.FC = () => {
         <nav className="navbar navbar-default navbar-fixed-top page-transition colors-e background-solid" role="navigation" id="top-nav">
             <div className="container">
                 <div className="navbar-header">
-                    <a className="menu-toggle ext-nav-toggle visible-xs-block" data-target=".ext-nav" href="#"><span></span></a>
+                    {/* <a className="menu-toggle ext-nav-toggle visible-xs-block" data-target=".ext-nav" href="#"><span></span></a> */}
                     <a className="menu-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" href="#"><span></span></a>
                     <a className="navbar-brand" href="">NIO<span className="highlight">US</span></a>
                 </div>
@@ -21,7 +21,7 @@ const Header: React.FC = () => {
                         <li><a href="#process" className="hover-effect">Process</a></li>
                         <li><a href="#skills" className="hover-effect">Skills</a></li>
                         <li><a href="#contact" className="hover-effect">Contact</a></li>
-                        <li className="hidden-xs"><a className="menu-toggle ext-nav-toggle" data-target=".ext-nav" href="#"><span></span></a></li>
+                        {/* <li className="hidden-xs"><a className="menu-toggle ext-nav-toggle" data-target=".ext-nav" href="#"><span></span></a></li> */}
                     </ul>
                 </div>
             </div>

@@ -1,3 +1,7 @@
 .colors-h input.button {
     color: #04d3c0;
 }
+
+.colors-h .help-block li {
+    color: #dc3545;
+}

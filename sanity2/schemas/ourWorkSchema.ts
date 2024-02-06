@@ -48,6 +48,11 @@ export default {
         type: 'string',
       },
       {
+        name: 'subTitle',
+        title: 'Sub Title',
+        type: 'string',
+      },
+      {
         name: 'image',
         title: 'Image',
         type: 'image',
@@ -69,12 +74,30 @@ export default {
       {
         name: 'description',
         title: 'Description',
-        type: 'text',
-      },
-      {
-        name: 'icon',
-        title: 'Icon Class Name',
-        type: 'string',
+        type: 'array',
+        of: [
+          {
+            type: 'object',
+            fields: [
+              {
+                name: 'header',
+                title: 'Header',
+                type: 'string',
+              },
+              {
+                name: 'content',
+                title: 'Content',
+                type: 'text', // or 'block' or any other type that suits your content
+              },
+            ],
+            preview: {
+              select: {
+                title: 'header',
+                subtitle: 'content',
+              },
+            },
+          },
+        ],
       },
     ],
   };

@@ -10,6 +10,7 @@ export const ourWorkSectionQuery = `
   "gallery": gallery[]->{
     _id,
     title,
+    subTitle,
     "image": {
       "url": image.asset->url,
     },

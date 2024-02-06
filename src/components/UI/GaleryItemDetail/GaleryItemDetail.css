@@ -1,0 +1,138 @@
+/* GalleryItemDetail.module.css */
+.gallery-item-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .image-container {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  
+  .text-content {
+    text-align: center;
+  }
+  
+  .detail-title {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .detail-subtitle {
+    font-size: 1.5em;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .detail-description {
+    font-size: 1em;
+    line-height: 1.6;
+  }
+  
+  .image-section {
+    padding: 0;
+    position: sticky; /* Make the image stick to the top when you scroll */
+    top: 0; /* Align the image to the top */
+    height: 80%; /* Optional: Adjust the height of the image section */
+    overflow: hidden; /* Optional: Prevents scroll bars on the image section */
+    z-index: 10; /* Ensure the image section stays above other content */
+}
+
+.detail-image {
+    width: 100%;
+    height: 80%; /* Adjust as needed */
+    object-fit: cover; /* Adjust as needed */
+}
+
+/* Add a relative position to the parent of the image section */
+.item-content .container {
+    position: relative; /* Ensure sticky positioning works correctly */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.text-section {
+    padding: 20px;
+    overflow-y: auto; /* Makes the text content scrollable if it overflows */
+}
+
+
+  .customloader{
+    margin: auto;
+    opacity: 1;
+    visibility: visible;
+    position: relative; /* or 'absolute' or 'fixed', depending on your layout */
+    z-index: 9999;
+    transform: translate(-50%,-50%);
+  }
+
+  .highlight{
+    color: #04d3c0;
+  }
+  .header{
+    color: #fff;
+  }
+
+  .content{
+    color: #555;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+
+  /* Styles for the text container */
+.text-container {
+    margin-top: 20px;
+}
+
+/* Styles for the unordered list */
+.header-content-list {
+    list-style: none; /* Remove default list styling */
+    padding-left: 0; /* Remove default padding */
+}
+
+/* Styles for each list item */
+.header-content-item {
+    margin-bottom: 15px; /* Space between items */
+    padding-bottom: 15px; /* Space within an item */
+    border-bottom: 1px solid #eaeaea; /* Horizontal line between items */
+}
+
+/* Styles for the header in each list item */
+.header-content-item .header {
+    font-size: 1.2em; /* Slightly larger font for headers */
+    margin-bottom: 5px; /* Space between header and content */
+    color: #333; /* Dark color for headers */
+    font-weight: bold; /* Make header bold */
+}
+
+/* Styles for the content in each list item */
+.header-content-item .content {
+    font-size: 1em; /* Regular font size for content */
+    color: #666; /* Lighter color for content */
+}
+
+/* Styles for the last item to not have a bottom border */
+.header-content-item:last-child {
+    border-bottom: none;
+}
+
+/* Additional styles for field labels */
+.field {
+    font-weight: bold; /* Bold field labels */
+}
+
+
+.text-section {
+    padding: 20px;
+    overflow-y: auto; /* Makes the text content scrollable if it overflows */
+    scrollbar-width: 0; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer 10+ */
+}
+
+

@@ -12,9 +12,10 @@ export interface IWorkSection {
   export interface GalleryItem {
     _id: string;
     title: string;
+    subTitle:string;
     image: SanityImage;
     categories: Category[];
-    description: string;
+    description: IHeaderContentPair[];
     icon: string;
   }
   
@@ -24,6 +25,10 @@ export interface IWorkSection {
     identifier: string;
   }
   
+  export interface IHeaderContentPair {
+    header: string;
+    content: string; // or any other type that represents your content structure
+  }
   // Reference to a category
   interface CategoryReference {
     _ref: string; // Reference to the Category's _id

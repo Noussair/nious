@@ -5,6 +5,9 @@ import ProcessSchema,{processStep} from "./ProcessSchema"
 import { statItem,statSection} from "./numbersSchema"
 import { Partner, PartnersSection } from "./partnersSchema"
 import { SkillSchema, skillsSchema } from "./skillsSchema"
+import { AboutUsSchema } from "./AboutUsSchema"
+import { HeroSectionSchema } from "./HeroSchema"
+
 export const schemaTypes = [
     teamSchema,
     ourWorkSchema,
@@ -12,6 +15,8 @@ export const schemaTypes = [
     statSection,
     PartnersSection,
     skillsSchema,
+    AboutUsSchema,
+    HeroSectionSchema,
     category,
     galleryItem,
     processStep,

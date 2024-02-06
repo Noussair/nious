@@ -1,6 +1,7 @@
 import  { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import { RecoilRoot } from 'recoil';
 
 const Main = () => {
     const loadScript = (url: string) => {
@@ -76,4 +77,4 @@ const Main = () => {
     return <App />;
 };
 
-ReactDOM.render(<Main />, document.getElementById('root'));
+ReactDOM.render( <RecoilRoot><Main /></RecoilRoot> , document.getElementById('root'));
