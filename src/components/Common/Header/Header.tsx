@@ -3,6 +3,7 @@ import React from 'react';
 //  title: string;
 // }
 import './Header.css'
+import logo from '../../../../public/logo.svg'
 const Header: React.FC = () => {
     return (
         <nav className="navbar navbar-default navbar-fixed-top page-transition colors-e background-solid" role="navigation" id="top-nav">
@@ -10,7 +11,8 @@ const Header: React.FC = () => {
                 <div className="navbar-header">
                     {/* <a className="menu-toggle ext-nav-toggle visible-xs-block" data-target=".ext-nav" href="#"><span></span></a> */}
                     <a className="menu-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" href="#"><span></span></a>
-                    <a className="navbar-brand" href="">NIO<span className="highlight">US</span></a>
+                    {/* <a className="navbar-brand" href="">NIO<span className="highlight">US</span></a> */}
+                     <a className="navbar-brand" href="/"><img height={50} width={90} src={logo}></img></a> 
                 </div>
                 <div className="collapse navbar-collapse">
                     <ul className="nav navbar-nav navbar-right">
