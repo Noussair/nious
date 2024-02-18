@@ -28,9 +28,9 @@ function App() {
     <Video></Video>
     <HomeSection></HomeSection>
     <AboutSection></AboutSection>
+    <TeamSection></TeamSection>
     <WorkSection></WorkSection>
     <PartnersSection></PartnersSection>
-    <TeamSection></TeamSection>
     <ProcessSection></ProcessSection>
     <StatSection></StatSection>
     <SkillsSection></SkillsSection>

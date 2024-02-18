@@ -6,7 +6,7 @@ footer, section {
 
 /* Update modal styles if necessary */
 .modal {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;

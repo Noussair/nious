@@ -30,10 +30,6 @@ export interface IWorkSection {
     content: string; // or any other type that represents your content structure
   }
   // Reference to a category
-  interface CategoryReference {
-    _ref: string; // Reference to the Category's _id
-    _type: string; // Should be 'category'
-  }
   
   // Assuming you have a definition for Sanity's image type
   interface SanityImage {

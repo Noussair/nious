@@ -8,8 +8,9 @@
   
   .image-container {
     width: 100%;
-    height: auto;
+    min-height: 500px;
     margin-bottom: 20px;
+    max-height: 500px;  
   }
   
   
@@ -42,14 +43,17 @@
     z-index: 10; /* Ensure the image section stays above other content */
 }
 
-.detail-image {
+
+  .detail-image {
+    max-height: 500px;
     width: 100%;
-    height: 80%; /* Adjust as needed */
-    object-fit: cover; /* Adjust as needed */
+    object-fit: cover;
 }
+
 
 /* Add a relative position to the parent of the image section */
 .item-content .container {
+    min-height: 600px;
     position: relative; /* Ensure sticky positioning works correctly */
     max-width: 1200px;
     margin: 0 auto;
@@ -135,4 +139,55 @@
     -ms-overflow-style: none; /* For Internet Explorer 10+ */
 }
 
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.close {
+  color: #04d3c0; /* Set the color of the close button */
+  cursor: pointer;
+  font-size:  24px; /* Adjust the font size as needed */
+  position: absolute; /* Position the close button */
+  top:  10px; /* Adjust the position as needed */
+  right:  10px; /* Adjust the position as needed */
+}
+
+.close:hover {
+  color: #04ad9c; /* Set a darker color for the close button on hover */
+}
+
+.next-previous{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-button {
+  background-color: transparent; /* Make the button transparent */
+  border: none;
+  padding:  10px  15px;
+  font-size:  16px;
+  cursor: pointer;
+  transition: background-color  0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: rgba(0,  0,  0,  0.1); /* Add a subtle hover effect */
+}
+.nav-button i {
+  color: #04d3c0; /* Set the color of the icons */
+}
+.nav-button:hover i {
+  color: #04ad9c; /* Set a darker color for the icons on hover */
+}
+
+/* GaleryItemDetail.css */
+.nav-button:disabled {
+  background-color: transparent; /* Make the button transparent */
+  color: #ccc; /* Set the color of the disabled button */
+  cursor: not-allowed; /* Change the cursor to indicate the button is disabled */
+  opacity:  0.5; /* Reduce the opacity to indicate the button is disabled */
+}
 

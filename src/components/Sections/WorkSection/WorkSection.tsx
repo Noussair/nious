@@ -12,8 +12,8 @@ import {GalleryItemDetail} from '../../UI/GaleryItemDetail/GaleryItemDetail';
 
 const WorkSection: React.FC = () => {
     const { data, error, isLoading } = useSanityData<IWorkSection>(ourWorkSectionQuery)
-    const [activeCategory, setActiveCategory] = useState('all');
-
+    const [activeCategory] = useState('all');
+    const [currentIndex, setCurrentIndex] = useState<number | null>(null);
     const filteredGalleryItems = data?.gallery.filter(item =>
         activeCategory === 'all' || item.categories.some(category => category._id === activeCategory)
     );
@@ -21,11 +21,26 @@ const WorkSection: React.FC = () => {
     const [showModal, setShowModal] = useRecoilState(modalState);
     const [selectedItem, setSelectedItem] = useRecoilState(selectedItemState);
   
-    const handleItemClick = (item: GalleryItem) => {
-      setSelectedItem(item);
-      setShowModal(true);
-    };
+    const handleItemClick = (item: GalleryItem, index: number) => {
+        setSelectedItem(item);
+        setCurrentIndex(index);
+        setShowModal(true);
+      };
   
+    const handleNext = () => {
+    if (currentIndex !== null && currentIndex < filteredGalleryItems.length -  1) {
+        setCurrentIndex(currentIndex +  1);
+        setSelectedItem(filteredGalleryItems[currentIndex +  1]);
+    }
+    };
+    
+    const handlePrevious = () => {
+    if (currentIndex !== null && currentIndex >  0) {
+        setCurrentIndex(currentIndex -  1);
+        setSelectedItem(filteredGalleryItems[currentIndex -  1]);
+    }
+    };
+
     const handleCloseModal = () => {
       setShowModal(false);
       setSelectedItem(null);
@@ -56,7 +71,7 @@ const WorkSection: React.FC = () => {
                             <div className="row">
                                 <div className="grid">
                                     {filteredGalleryItems && filteredGalleryItems.map((item, idx) => (
-                                        <GalleryItemCard onClick={() => handleItemClick(item)} key={idx} item={item} idx={idx} />
+                                        <GalleryItemCard onClick={() => handleItemClick(item,idx)} key={idx} item={item} idx={idx} />
                                     ))}
                                 </div>
                             </div>
@@ -65,7 +80,7 @@ const WorkSection: React.FC = () => {
                 </div>
             </div>
             <Modal  show={showModal} onClose={handleCloseModal}>
-    {selectedItem && <GalleryItemDetail item={selectedItem} />}
+    {selectedItem && <GalleryItemDetail disablePrivous={currentIndex ===  0} disableNext={currentIndex === filteredGalleryItems.length -  1} onClose={handleCloseModal} item={selectedItem} items={filteredGalleryItems} currentIndex={currentIndex} onNext={handleNext} onPrevious={handlePrevious} />}
 </Modal>
         </section>
     );

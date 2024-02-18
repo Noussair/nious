@@ -10,7 +10,7 @@ interface GalleryItemProps {
 const GalleryItemCard: React.FC<GalleryItemProps> = ({ item, idx,onClick }) => (
  <div key={idx} className="item col-md-3 col-sm-4 col-xs-6" data-groups={'[' + item.categories.map(c => `"${c.title}"`).join(', ') + ']'}>
     <a onClick={onClick} className="hover-overlay">
-      <img alt={item.title} src={item.image.url} />
+      <img className='galery-image' alt={item.title} src={item.image.url} />
       <div className="overlay background-90-a">
         <div className="hidden-xs">
           <p className="title heading-a">{item.title}</p>
